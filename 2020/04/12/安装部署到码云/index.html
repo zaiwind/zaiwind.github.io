@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  
+    <link rel="icon" href="">
+  
+    
+  <title>安装部署到码云 | Hexo</title>
+  <meta name="description" content="">
+  
+<link rel="stylesheet" href="/yanghao/style.css">
+
+  
+<link rel="stylesheet" href="/yanghao/lib/jquery.fancybox.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <header>
+  <div class="header-container">
+    <a class='logo' href="/yanghao/">
+      <span>Hexo</span>
+    </a>
+    <ul class="right-header">
+      
+        <li class="nav-item">
+          
+            <a href="/yanghao/" class="item-link">首页</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/yanghao/about" class="item-link">关于</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/yanghao/archives" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/yanghao/tags" class="item-link">标签</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+</header>
+
+  <main id='post'>
+  <div class="content">
+    <article>
+      <section class="content markdown-body">
+        <h1>
+          安装部署到码云
+        </h1>
+        <div class='post-meta'>
+          <i class="fa fa-calendar"
+            aria-hidden="true"></i> <time>
+            2020/04/12</time>
+          
+          
+        </div>
+        <p>部署静态Html文件到码云</p>
+<ul>
+<li><p>首先我们要有一个码云账号（小伙伴们用自己的邮箱手机等注册一个）<br><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgitee.com%2F" target="_blank" rel="noopener">https://gitee.com/</a></p>
+</li>
+<li><p>创建一个项目</p>
+</li>
+<li><p>创建完项目后得到项目的Https的地址后面要用。地址获取如下图</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-d73e5b94b3c7bd6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/815/format/webp" alt="img"></p>
+<p>项目仓库的位置</p>
+<p>​</p>
+</li>
+<li><p>Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。但是我们要先安装一个插件。<br>在git bash输入命令：<br><code>npm install hexo-deployer-git --save</code><br>接下来是配置根目录_config.jml文件（用记事本或者各种编辑器打开），<br>修改deploy的值，修改前如下图：</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-d5658bfb27ff0214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/241/format/webp" alt="img"></p>
+<p>deploy</p>
+<p>​</p>
+<p>修改后如下图</p>
+<p>​</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-cc6bc1e88d633393.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/434/format/webp" alt="img"></p>
+<p>修改deploy</p>
+<p>​</p>
+<ul>
+<li><p>其中repo: 跟的地址就是刚才码云仓库的地址</p>
+<p>​</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-b6cf52e822ffd9ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/815/format/webp" alt="img"></p>
+<p>仓库地址</p>
+<p>​</p>
+<p>(以防有些小伙伴找不到，赘余一下)(最后修改完千万别忘了保存一下)</p>
+<p>​</p>
+<p>还有 branch和message这两个写不写都可以，默认也会帮你补上，知道git命令的小伙伴都会知道这两个字段是干嘛的，不知道的忽略就好，不影响使用，有强迫症的学霸可以自行百度 :)</p>
+</li>
+</ul>
+</li>
+<li><p>开始部署 在blog文件夹中打开git bash输入命令：<br><code>hexo deploy</code><br>之后会弹出输入码云账号密码的对话框。<br>部署成功之后进入自己的码云账号，查看之前创建的项目中出现了本地项目中public文件夹中的文件</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-2a602c1f250b7da7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/936/format/webp" alt="img"></p>
+<p>部署后</p>
+<p>​</p>
+<p>这时候就代表部署成功了。</p>
+<p>​</p>
+</li>
+<li><p>然后开启码云的Pages功能：</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-2cc0d1f81ccf4afd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/905/format/webp" alt="img"></p>
+<p>pages的位置</p>
+<p>​</p>
+</li>
+<li><p>启动服务</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-81f78946b27a5e12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/933/format/webp" alt="img"></p>
+<p>启动服务</p>
+<p>​</p>
+</li>
+<li><p>访问连接</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-18c414ad84055aa1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/886/format/webp" alt="img"></p>
+<p>访问连接</p>
+<p>​</p>
+</li>
+<li><p>擦，什么鬼，怎么和本地服务器看到的不一样，样式全无</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-11d071f5d713c820.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/947/format/webp" alt="img"></p>
+<p>没有样式</p>
+<p>​</p>
+</li>
+<li><p>不要慌，我也在这里郁闷了好久，所以写出来分享给大家</p>
+</li>
+<li><p>原因：<br>网上各种说法都有，有绑定自己域名的，有什么什么的，我觉得都没有抓住本质，其实就是需要修改一下_config.yml配置文件，之前在本地跑服务器有样式，是因为所有的资源都在本地，都能找到，现在资源都上传到云端了，资源的对应关系肯定有所改变，因为找不到对应的资源了所以没有样式了。</p>
+</li>
+<li><p>解决办法：修改_config.yml<br>还是用记事本或者各种编辑器打开_config.yml找到</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-c2bf19b225d46018.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/451/format/webp" alt="img"></p>
+<p>url</p>
+<p>​</p>
+<p>注释写的也很清楚，需要修改url和root，根据刚才Page服务中看到的网址</p>
+<p>​</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-695e82b7c47ba812.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/886/format/webp" alt="img"></p>
+<p>网址</p>
+<p>​</p>
+<p>修改成</p>
+<p>​</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-2ba3f5ce8951930c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/438/format/webp" alt="img"></p>
+<p>修改url</p>
+<p>​</p>
+</li>
+<li><p>然后再进入blog的文件夹执行命令：</p>
+<ul>
+<li><code>hexo clean</code></li>
+<li><code>hexo generate</code></li>
+<li><code>hexo deploy</code><br>建议，以后每次进行修改然后重新部署到码云时，都执行这三句命令 或者偷懒直接输入<code>hexo generate --deploy</code></li>
+</ul>
+</li>
+<li><p>然后咱们再回到码云的Pages页面，点开链接，如果看到</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-0188c03a28cf509d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/938/format/webp" alt="img"></p>
+<p>网页</p>
+<p>​</p>
+<p>大吉大利，今晚吃鸡，</p>
+<p>​</p>
+<p>但是如果看到的还是</p>
+<p>​</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-eb1ea8fe8a962d83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/947/format/webp" alt="img"></p>
+<p>没有样式</p>
+<p>​</p>
+<p>擦，还是老样子，有没有搞错，惊不惊喜，意不意外，大家不要慌，该做的咱们都已经做完了。</p>
+<p>​</p>
+<p>出现这种情况，</p>
+<p>​</p>
+<ul>
+<li>1.码云部署没有反应过来</li>
+<li>2.就是浏览器保留了之前的缓存，清除一下缓存，或者直接换一个浏览器再打开我们的网址</li>
+</ul>
+</li>
+<li><p>当你看到</p>
+<p>​</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3241580-0188c03a28cf509d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/938/format/webp" alt="img"></p>
+</li>
+</ul>
+
+      </section>
+    </article>
+    
+    
+  </div>
+  <aside>
+    
+  </aside>
+</main>
+
+
+
+  <footer>
+  <div class="copyright">
+    <div>
+      &copy;
+      2020 | Powered by <a href="https://hexo.io"
+        target="_blank">Hexo</a>&nbsp
+    </div>
+    <div>
+      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath"
+        target="_blank">Aath</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="/yanghao/lib/ScrollMagic.min.js"></script>
+
+
+<script src="/yanghao/lib/lodash.min.js"></script>
+
+<script>
+  document.body.addEventListener('touchstart', function () { });
+
+  // 文章图片预览
+  $("article img").each(function () {
+    var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
+  });
+
+  // 目录联动
+  let tocLinkList = $('.toc-link')
+
+  let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.01
+    }
+  })
+
+  tocLinkList.each(function (index, elem) {
+    let href = $(this).attr("href");
+    let nextHref = tocLinkList.eq(index + 1).attr("href");
+    let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+    new ScrollMagic.Scene({ triggerElement: href })
+      .duration(height)
+      .setClassToggle(".toc [href='" + href + "']", 'active')
+      .addTo(controller)
+  })
+
+  window.addEventListener('load', function () {
+    // 目录联动 图片加载完成后从新计算
+    tocLinkList.each(function (index, elem) {
+      let href = $(this).attr("href");
+      let nextHref = tocLinkList.eq(index + 1).attr("href");
+      let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+      new ScrollMagic.Scene({ triggerElement: href })
+        .duration(height)
+        .setClassToggle(".toc [href='" + href + "']", 'active')
+        .addTo(controller)
+    })
+  })
+</script>
+
+<script src="/yanghao/lib/jquery.fancybox.min.js"></script>
+
+
+
+</body>
+</html>
